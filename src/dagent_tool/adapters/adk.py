@@ -62,7 +62,8 @@ async def adk_tool(requirements: Requirement, text: str, is_new_session: bool = 
         ...         "skills": ["python", "code-review", "best-practices"],
         ...         "max_agent_cost": 0.01
         ...     },
-        ...     text="Review this function for potential bugs and improvements..."
+        ...     text="Review this function for potential bugs and improvements...",
+        ...     is_new_session=False
         ... )
         >>> print(response["response"])
     
@@ -72,6 +73,10 @@ async def adk_tool(requirements: Requirement, text: str, is_new_session: bool = 
         - Credits are deducted based on agent cost + token usage
         - is_new_session is used to start a new session if the context of current relavant agent completely changes and user want new agent to connect to enable this i.e, set it to True.
 
+    IMPORTANT: 
+        - is_new_session is used to start a new session if the context of current relavant agent completely changes and user want new agent to connect to enable this i.e, set it to True.
+        - If you are using this tool in a loop, you should set is_new_session to True after each iteration.
+        - Check the relavance of the message according to current context and set is_new_session accordingly.
     """
     return await run_api(
         requirements,
