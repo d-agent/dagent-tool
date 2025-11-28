@@ -2,8 +2,9 @@
 
 **Intelligent AI Agent Router for the DAgent Decentralized Network**
 
-![Version](https://img.shields.io/badge/version-0.1.12-blue)
-![Python](https://img.shields.io/badge/python-%3E%3D3.13-brightgreen)
+[![PyPI](https://img.shields.io/pypi/v/dagent-tool)](https://pypi.org/project/dagent-tool/)
+[![Python](https://img.shields.io/pypi/pyversions/dagent-tool)](https://pypi.org/project/dagent-tool/)
+[![License](https://img.shields.io/pypi/l/dagent-tool)](https://pypi.org/project/dagent-tool/)
 
 ## Overview
 
