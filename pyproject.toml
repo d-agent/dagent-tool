@@ -1,0 +1,45 @@
+[project]
+name = "dagent-tool"
+version = "0.1.13"
+description = "DAgent Network Tool - Intelligent AI Agent Router"
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.0",
+]
+
+license = {text = "MIT"}
+authors = [
+    {name = "Harsh Duche", email = "ducheharsh@gmail.com"}
+]
+keywords = ["ai", "agent", "langchain", "crewai", "adk"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://web.dagent.dev/dagent-tool"
+Repository = "https://github.com/d-agent/dagent-tool"
+
+[project.optional-dependencies]
+langchain = ["langchain>=0.2"]
+adk = ["google-adk>=1.19.0"]
+crewai = ["crewai>=0.30"]
+all = [
+    "langchain>=0.2",
+    "google-adk>=1.19.0",
+    "crewai>=0.30",
+]
+dev = ["ruff>=0.14.6"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
